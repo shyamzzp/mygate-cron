@@ -1,4 +1,4 @@
-name: "Workflow example"
+name: "Date Run"
 on:
   push:
     branches:
