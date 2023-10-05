@@ -1,13 +1,1 @@
-name: "Date Run"
-on:
-  push:
-    branches:
-      - main
 
-jobs:
-  hello:
-    name: "Say hello"
-    runs-on: ubuntu-latest
-    steps:
-      - name: Display current time
-        run: echo "Current date and time $(date)"
