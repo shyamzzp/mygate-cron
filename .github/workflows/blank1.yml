@@ -1,0 +1,13 @@
+name: "Workflow example"
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  hello:
+    name: "Say hello"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display current time
+        run: echo "Current time: $(date +'%Y-%m-%d %H:%M:%S')"
