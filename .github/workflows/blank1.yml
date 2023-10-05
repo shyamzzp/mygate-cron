@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Display current time
-        run: echo "Current time: $(date +'%Y-%m-%d %H:%M:%S')"
+        run: echo "Current date and time $(date)"
