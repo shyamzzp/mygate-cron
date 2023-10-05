@@ -2,19 +2,14 @@ name: "Workflow example"
 on:
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron:  '54 07 * * *'
+    - cron: "*/1 * * * *"
 
 jobs:
-  python-job:
-    name: "Python job"
+  bash-example:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-      - name: Setup python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.10.6'
-      - name: Run python script
-        run: echo Hello World
-   
+      - name: Group of log lines
+        run: |
+            echo "::group::My title"
+            echo "Inside group"
+            echo "::endgroup::"
